@@ -33,7 +33,7 @@ public class UserController {
             userService.saveEntry(user);
             return new ResponseEntity<>(user, HttpStatus.CREATED);
         } catch (Exception e) {
-            e.printStackTrace();   // 🔥 THIS WILL SHOW REAL ERROR
+            e.printStackTrace();   //  THIS WILL SHOW REAL ERROR
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
