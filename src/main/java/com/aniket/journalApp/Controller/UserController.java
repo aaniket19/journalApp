@@ -28,7 +28,7 @@ public class UserController {
     private PasswordEncoder passwordEncoder;
 
     // this controller creating a normal user
-    @PostMapping
+    @PostMapping("/create-user")
     public ResponseEntity<User> createUser(@RequestBody User user) {
         userService.saveNewUser(user);   // IMPORTANT
         return new ResponseEntity<>(user, HttpStatus.CREATED);
